@@ -24,9 +24,9 @@ void loop() {
   distance = time * 0.0343 / 2;  // distance in cm
 
   // Convert float to 4 bytes
-  byte *bytes = (byte*)&distance;  //transfer by bytes 
+  byte *bytes = (byte*)&distance;   
   digitalWrite(SS, LOW);
-  for (int i = 0; i < 4; i++) {    //float datatype takes 4 bytes so transferring 4 bytes 
+  for (int i = 0; i < 4; i++) {    //float datatype takes 4 bytes so transferring 4 bytes one at a time
     SPI.transfer(bytes[i]);
   }
   digitalWrite(SS, HIGH);
