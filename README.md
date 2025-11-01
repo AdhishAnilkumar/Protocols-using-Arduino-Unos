@@ -1,4 +1,4 @@
-# Protocols-using-Arduino-Unos
+# Communiction Protocols-using-Arduino-Unos
 
 **Aim**: To implement protocols such as UART,I2C and SPI using 2 Arduino Uno boards.<br>
 
