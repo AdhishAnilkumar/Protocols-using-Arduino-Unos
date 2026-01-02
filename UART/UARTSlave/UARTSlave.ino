@@ -6,13 +6,13 @@ String msg;
 
 void setup() {
   lcd.begin(16, 2);
-  Serial.begin(9600);   // start UART for Arduino #2
+  Serial.begin(9600);  
 }
 
 void loop() {
   if (Serial.available()) {
     msg = Serial.readStringUntil('\n');
-     msg.trim();//trim the last character
+     msg.trim();
 
     lcd.clear();
     lcd.setCursor(0, 0);
