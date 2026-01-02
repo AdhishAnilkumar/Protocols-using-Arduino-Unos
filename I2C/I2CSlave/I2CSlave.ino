@@ -19,10 +19,9 @@ void setup() {
 }
 
 void loop() {
-  delay(100); // idle — all work happens in interrupts
+  delay(100); 
 }
 
-// === When Master sends data ===
 void receiveEvent(int howMany) {
   
   
@@ -33,11 +32,10 @@ void receiveEvent(int howMany) {
     msg += c;
   }
 
-  msg.trim();
+  msg.trim();//trim msg
 
   Serial.println(msg);
 
-  // Control servo
   if (msg == "RIGHT"||msg =="right") {
     mine.write(0);
     reply = "Servo RIGHT";
@@ -57,7 +55,6 @@ void receiveEvent(int howMany) {
   Serial.println(reply);
 }
 
-// === When Master requests confirmation ===
 void requestEvent() {
-  Wire.write(reply.c_str());   // send confirmation string back
+  Wire.write(reply.c_str());   
 }
