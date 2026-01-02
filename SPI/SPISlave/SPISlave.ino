@@ -20,8 +20,8 @@ ISR(SPI_STC_vect) {                       //Interrupt Service Routine
   receivedBytes[byteCount] = SPDR;
   byteCount++;
   if (byteCount == 4) {
-    receivedDistance = *(float*)receivedBytes;  //recieveing bytes 
-    byteCount = 0;                              //resetting count 
+    receivedDistance = *(float*)receivedBytes;  
+    byteCount = 0;                              
   }
 }
 
@@ -31,7 +31,7 @@ void loop() {
     lcd.setCursor(0, 0);
     lcd.print("Distance: ");
      lcd.setCursor(0, 1);
-    lcd.print(receivedDistance); // Print with 2 decimal places
+    lcd.print(receivedDistance); 
     delay(500);
   }
 }
