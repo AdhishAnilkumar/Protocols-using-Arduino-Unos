@@ -26,7 +26,7 @@ void loop() {
   // Convert float to 4 bytes
   byte *bytes = (byte*)&distance;   
   digitalWrite(SS, LOW);
-  for (int i = 0; i < 4; i++) {    //float datatype takes 4 bytes so transferring 4 bytes one at a time
+  for (int i = 0; i < 4; i++) {   
     SPI.transfer(bytes[i]);
   }
   digitalWrite(SS, HIGH);
