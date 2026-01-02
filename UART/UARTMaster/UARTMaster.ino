@@ -6,7 +6,7 @@ void setup() {
 
 void loop() {
   if (Serial.available()) {
-    inputString = Serial.readString();  // read whole string
+    inputString = Serial.readString();  
    
     Serial.println(inputString);
   }
